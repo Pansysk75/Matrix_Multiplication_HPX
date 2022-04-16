@@ -11,7 +11,7 @@ You can see that CPU utilization is inconsistent.
 
 
 ### Parallel Matrix Product 1 (Bad Implementation):
-Due to bad implementation, memory usage skyrockets. That is because memory is released only when the whole matrix multiplication has been completed.
+Due to bad implementation, memory usage skyrockets. That is because memory is released only when the whole matrix multiplication has been completed. Thus, this implementation is terribly slow.
 
 ![image](https://user-images.githubusercontent.com/75637426/163678549-a43d2ce4-9f22-4d42-9e20-a4cada3eb2c8.png)
 
@@ -19,7 +19,7 @@ Due to bad implementation, memory usage skyrockets. That is because memory is re
 
 
 ### Parallel Matrix Product 2 (Good Implementation):
-CPU is fully utilized. 
+CPU is fully utilized. This implementation runs 2-3 times faster than sequential on my machine.
 
 ![image](https://user-images.githubusercontent.com/75637426/163678505-6e126fa2-a792-428c-9c6e-24d1b3fa0733.png)
 
