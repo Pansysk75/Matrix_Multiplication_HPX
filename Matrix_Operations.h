@@ -49,6 +49,8 @@ namespace matops { namespace par {
 
 	template <typename T>
 	Matrix<T> product(Matrix<T>& m1, Matrix<T>& m2) {
+		assert(m1.cols() == m2.rows());
+
 		Matrix<T> m3(m1.rows(), m2.cols());	
 
 		hpx::for_each(
@@ -70,6 +72,8 @@ namespace matops { namespace par {
 
 	template <typename T>
 	Matrix<T> product2(Matrix<T>& m1, Matrix<T>& m2) {
+		assert(m1.cols() == m2.rows());
+
 		std::vector<hpx::shared_future<T>> d3(m1.rows() * m2.cols());
 
 		for (size_t i = 0; i < d3.size(); i++) {

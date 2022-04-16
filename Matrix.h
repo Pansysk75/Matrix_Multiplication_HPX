@@ -30,7 +30,7 @@ public:
 		return _data.end();
 	}
 
-	T& at(int row, int column) {
+	T& at(size_t row, size_t column) {
 		return _data[row * _cols + column];
 	}
 
