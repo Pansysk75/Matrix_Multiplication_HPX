@@ -4,14 +4,14 @@
 template <typename T>
 class Matrix {
 private:
-	std::vector<T> data;
+	std::vector<T> _data;
 	size_t _rows;
 	size_t _cols;
 
 public:
 
 	Matrix(size_t rows, size_t columns) :_rows(rows), _cols(columns) {
-		data.resize(_rows * _cols);
+		_data.resize(_rows * _cols);
 	}
 
 	size_t rows() {
@@ -23,19 +23,22 @@ public:
 	}
 
 	typename std::vector<T>::iterator begin() {
-		return data.begin();
+		return _data.begin();
 	}
 
 	typename std::vector<T>::iterator end() {
-		return data.end();
+		return _data.end();
 	}
 
 	T& at(int row, int column) {
-		return data[row * _cols + column];
+		return _data[row * _cols + column];
 	}
 
 	T& operator[](int i) {
-		return data[i];
+		return _data[i];
 	}
 
+	typename std::vector<T>& data() {
+		return data;
+	}
 };
