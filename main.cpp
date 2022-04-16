@@ -1,6 +1,4 @@
-﻿// Matrix_Multiplication_HPX.cpp : Defines the entry point for the application.
-//
-#include "hpx/hpx_main.hpp"
+﻿#include "hpx/hpx_main.hpp"
 #include <iostream>
 #include <algorithm>
 #include <chrono>
